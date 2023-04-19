@@ -2,9 +2,10 @@
   "name": "to-do-list",
   "version": "1.0.0",
   "description": "to do list app",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,8 @@
   "author": "stpafk",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-env": "^7.21.4",
+    "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",
     "webpack": "^5.79.0",
