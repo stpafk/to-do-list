@@ -1,3 +1,13 @@
+:root {
+    --light-blue: rgba(0, 153, 255, 0.637);
+    --dark-blue: rgba(4, 4, 131, 0.507);
+}
+
 body {
-    background-color: greenyellow;
+    margin: 0;
+    background-color: var(--light-blue);
+}
+
+#content {
+    background-color: var(--dark-blue);
 }
