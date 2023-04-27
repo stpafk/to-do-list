@@ -3,7 +3,7 @@ import tasksObj from "./objTsk";
 export default function taskHandler() {
 
     if (tasksObj().length < 5) {
-
+        
         const add = document.createElement('form');
         add.classList = "addTask";
 
@@ -28,8 +28,10 @@ export default function taskHandler() {
 
         const main = document.querySelector('main');
         main.appendChild(add);
+        
 
         return main
+        
     } else {
         console.log('error');
     }

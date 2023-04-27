@@ -1,3 +1,5 @@
+import taskHandler from "./handleTask";
+
 export default function loadPage() {
 
         // Create the navbar element
@@ -63,6 +65,7 @@ export default function loadPage() {
     const mainh1 = document.createElement("h1");
     mainh1.textContent = "Your Tasks";
     main.appendChild(mainh1);
+
 
     const content = document.querySelector("#content");
     content.appendChild(navbar);
