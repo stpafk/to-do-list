@@ -1,6 +1,6 @@
 import './style.css'
 import loadPage from './mainPage';
-import taskHandler from './addTask';
+import taskHandler from './handleTask';
 
 function main() {
     

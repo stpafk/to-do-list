@@ -1,28 +1,14 @@
-function tasksObj() {
-    const list = []
-
-    return list;
-}
-
-function Task(tskName, due, date) {
-    this.name = tskName,
-    this.due = due,
-    this.date = date;
-};
-
-function addTasks() {
-
-    let newTask = new Task(tskName, due, date);
-    tasksObj.push(newTask);
-    saveTasks();
-
-};
+import tasksObj from "./objTsk";
 
 export default function taskHandler() {
 
     if (tasksObj().length < 5) {
-        const add = document.createElement('div');
+
+        const add = document.createElement('form');
         add.classList = "addTask";
+
+        const addH1 = document.createElement('h3');
+        addH1.innerHTML = "Add New Task";
 
         const nameofTask = document.createElement('input');
         nameofTask.classList = "inputTaskName";
@@ -33,7 +19,9 @@ export default function taskHandler() {
         const divButton = document.createElement('input');
         divButton.type = "submit";
         divButton.classList = "taskSubmit";
+        divButton.value = "Submit";
 
+        add.appendChild(addH1);
         add.appendChild(nameofTask);
         add.appendChild(dueTo);
         add.appendChild(divButton);
