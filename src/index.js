@@ -13,4 +13,10 @@ function main() {
     return mainSection;
 }
 
+const elementId = document.querySelector('#content');
+
 document.body.appendChild(main())
+
+document.querySelector('form').onsubmit = () => {
+    console.log('yes')
+}
