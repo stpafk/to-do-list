@@ -2,7 +2,8 @@ import './style.css'
 import loadPage from './mainPage';
 import taskHandler from './handleTask';
 import addTasks from './addTasks';
-
+import tasksObj from './objTsk';
+console.log(tasksObj.list)
 
 function main() {
     
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const task = document.querySelector('.inputTaskName').value;
         const date = document.querySelector('.inputDueTo').value;
         addTasks(task, date);
+        //it does append to the local sotrage
     };
 })
 
