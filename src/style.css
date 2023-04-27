@@ -1,6 +1,6 @@
 :root {
-    --light-blue: #67e8f9;
-    --dark-blue: #0891b2;
+    --light-blue: #e0f2fe;
+    --dark-blue: #075985;
 }
 
 body {
@@ -17,16 +17,18 @@ body {
 }
 
 .navbar {
-  grid-area: navbar;
-  background-color: var(--dark-blue);
+    grid-area: navbar;
+    background-color: var(--dark-blue);
+    padding: 0 5%;
+    font-size: 2rem;
 }
 
 .sidebar {
-  grid-area: sidebar;
-  background-color: var(--dark-blue);
+    grid-area: sidebar;
+    background-color: #0369a1;
 }
 
 main {
-  background-color: var(--light-blue);
-  grid-area: main;
+    background-color: var(--light-blue);
+    grid-area: main;
 }
