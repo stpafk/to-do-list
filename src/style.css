@@ -1,13 +1,32 @@
 :root {
-    --light-blue: rgba(0, 153, 255, 0.637);
-    --dark-blue: rgba(4, 4, 131, 0.507);
+    --light-blue: #67e8f9;
+    --dark-blue: #0891b2;
 }
 
 body {
     margin: 0;
-    background-color: var(--light-blue);
 }
 
 #content {
-    background-color: var(--dark-blue);
+    display: grid;
+     grid-template-columns: 18vw 82vw;
+     grid-template-rows: 25vh 75vh;
+     grid-template-areas:
+      "sidebar navbar"
+      "sidebar main";
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: var(--dark-blue);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--dark-blue);
+}
+
+main {
+  background-color: var(--light-blue);
+  grid-area: main;
 }
