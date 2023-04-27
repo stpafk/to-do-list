@@ -2,7 +2,7 @@ import tasksObj from "./objTsk";
 
 export default function taskHandler() {
 
-    if (tasksObj().length < 5) {
+    if ( tasksObj.list.length < 5) {
         
         const add = document.createElement('form');
         add.classList = "addTask";

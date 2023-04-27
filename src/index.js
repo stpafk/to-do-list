@@ -3,6 +3,7 @@ import loadPage from './mainPage';
 import taskHandler from './handleTask';
 import addTasks from './addTasks';
 
+
 function main() {
     
     const mainSection = loadPage();
