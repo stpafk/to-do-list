@@ -3,6 +3,7 @@ import loadPage from './mainPage';
 import taskHandler from './handleTask';
 import addTasks from './addTasks';
 import tasksObj from './objTsk';
+import loadTasks from './loadTasks';
 console.log(tasksObj.list)
 
 function main() {
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         addTasks(task, date);
         //it does append to the local sotrage
     };
+    loadTasks()
 })
 
 document.body.appendChild(main())
