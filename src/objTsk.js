@@ -1,12 +1,13 @@
 import Task from "./Task";
-import loadTasks from "./loadTasks";
+import saveTask from "./saveTasks";
 
 const tasksObj = {
     list: [],
     addTask(tskName, due) {
         let newTask = new Task(tskName, due);
         this.list.push(newTask);
-        loadTasks();
+        sa();
+        console.log(this.list)
     }
 }
 

@@ -1,7 +1,8 @@
+import tasksObj from "./objTsk";
 
 export default function loadTasks() {
-    let storedLibrary = localStorage.getItem("myTasks"); // retrieve the myLibrary array from local storage as a JSON string
+    let storedTasks = localStorage.getItem("myTasks"); // retrieve the myLibrary array from local storage as a JSON string
     if (storedTasks) {
-        myLibrary = JSON.parse(storedLibrary); // convert the JSON string back to a JavaScript object
+        tasksObj.list = JSON.parse(storedTasks); // convert the JSON string back to a JavaScript object
     }
 }
