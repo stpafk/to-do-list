@@ -72,5 +72,5 @@ export default function loadPage() {
     content.appendChild(sidebar);
     content.appendChild(main);
 
-    return content
+    return content;
 }

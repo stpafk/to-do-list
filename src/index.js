@@ -4,6 +4,7 @@ import taskHandler from './handleTask';
 import addTasks from './addTasks';
 import tasksObj from './objTsk';
 import loadTasks from './loadTasks';
+import displayTasks from './displayTasks';
 console.log(tasksObj.list)
 
 function main() {
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //it does append to the local sotrage
     };
     loadTasks()
+    displayTasks()
 })
 
 document.body.appendChild(main())
