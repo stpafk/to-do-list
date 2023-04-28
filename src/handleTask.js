@@ -1,10 +1,11 @@
+import displayTasks from "./displayTasks";
 import tasksObj from "./objTsk";
 
 export default function taskHandler() {
-
-    if ( tasksObj.list.length < 5) {
+    let objProperty = localStorage.getItem("myTasks");
+    if (!objProperty) {
         
-        const add = document.createElement('form');
+        const add = document.createElement('form'); 
         add.classList = "addTask";
 
         const addH1 = document.createElement('h3');
@@ -32,8 +33,14 @@ export default function taskHandler() {
 
         return main
         
+    } else if (objProperty.length < 5) {
+
+        main.appendChild(add);
+
+        return main
+
     } else {
-        console.log('error');
+        return main
     }
 
 }

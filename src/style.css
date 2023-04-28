@@ -1,6 +1,7 @@
 :root {
     --light-blue: #e0f2fe;
     --dark-blue: #075985;
+    font-family: georgia;
 }
 
 body {
@@ -9,8 +10,8 @@ body {
 
 #content {
     display: grid;
-     grid-template-columns: 18vw 82vw;
-     grid-template-rows: 25vh 75vh;
+     grid-template-columns: 0.5fr 2fr;
+     grid-template-rows: 0.2fr 4fr;
      grid-template-areas:
       "sidebar navbar"
       "sidebar main";
