@@ -35,12 +35,8 @@ export default function taskHandler() {
 
     } else if (objProperty.length < 5) {
         const main = document.querySelector('main');
+        displayTasks()
         main.appendChild(add);
-        const task = displayTasks();
-        console.log(task)
-
-        return main
-
         
     } else {
         
