@@ -16,6 +16,7 @@ export default function taskHandler() {
 
     const dueTo = document.createElement('input');
     dueTo.classList = "inputDueTo";
+    dueTo.type = 'date';
 
     const divButton = document.createElement('input');
     divButton.type = "submit";
