@@ -33,13 +33,12 @@ export default function taskHandler() {
 
         return main
 
-    } else if (objProperty.length < 5) {
-        const main = document.querySelector('main');
-        displayTasks()
-        main.appendChild(add);
-        
     } else {
-        
+        const main = document.querySelector("main");
+        main.appendChild(add);
+        displayTasks()
+
+        return main
     }
 
 }
