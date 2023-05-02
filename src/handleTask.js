@@ -29,6 +29,7 @@ export default function taskHandler() {
     add.appendChild(divButton);
 
     if (!objProperty) {
+        
         const main = document.querySelector('main');
         main.appendChild(add);
 

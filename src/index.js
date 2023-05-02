@@ -26,8 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     loadTasks()
     displayTasks()
-})
+});
+
 
 document.body.appendChild(main())
-
-
