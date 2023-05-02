@@ -1,7 +1,7 @@
 import tasksObj from "./objTsk";
-import { isThisWeek } from "date-fns";
+import { isToday } from "date-fns";
 
-export default function Week() {
+export default function Today() {
     document.querySelector("main").innerHTML = "";
 
     const main = document.querySelector('main');
@@ -12,8 +12,8 @@ export default function Week() {
     let index = 0;
     tasksObj.list.forEach((task) => {
 
-        let thisWeek = new Date(task.due);
-        if (isThisWeek(thisWeek)) {
+        let todayTask = new Date(`${task.due}T00:00`);
+        if (isToday(todayTask)) {
             let Node = document.querySelector(".taskObjects");
             let Child = document.createElement("div");
         // for the moment i'll just keep a simple paragraph

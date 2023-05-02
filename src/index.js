@@ -2,10 +2,10 @@ import './style.css'
 import loadPage from './mainPage';
 import taskHandler from './handleTask';
 import addTasks from './addTasks';
-import tasksObj from './objTsk';
 import loadTasks from './loadTasks';
 import displayTasks from './displayTasks';
-console.log(tasksObj.list)
+import Week from './weekTasks';
+import Today from './todayTasks.js'
 
 function main() {
     
@@ -24,8 +24,25 @@ document.addEventListener('DOMContentLoaded', function() {
         addTasks(task, date);
         //it does append to the local sotrage
     };
-    loadTasks()
-    displayTasks()
+
+
+    document.querySelector(".allBtn").addEventListener('click', function() {
+        location.reload()
+    });
+
+    document.querySelector(".todayBtn").addEventListener('click', function() {
+        Today();
+    });
+
+    document.querySelector(".weekBtn").addEventListener('click', function() {
+        Week();
+    });
+
+    loadTasks();
+    displayTasks();
+
+    return false
+
 });
 
 

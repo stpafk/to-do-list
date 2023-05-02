@@ -16,7 +16,7 @@ function displayTasks() {
             let Text = document.createElement('p');
 
             let childText = document.createTextNode(`Task: ${task.name}, Due: ${task.due}`);
-            Child.setAttribute("data-index", index)
+            Child.setAttribute("data-index", index);
 
             Child.appendChild(Text);
             Text.appendChild(childText);
