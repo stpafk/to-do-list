@@ -16,7 +16,7 @@ function displayTasks() {
             // for the moment i'll just keep a simple paragraph
             let Text = document.createElement('p');
 
-            let childText = document.createTextNode(`Task: ${task.name}, Due: ${task.due}`);
+            let childText = document.createTextNode(`Task: ${task.name}, Due: ${task.due}, ${task.importance}`);
             Child.setAttribute("data-index", index);
 
             let delButton = document.createElement('button');

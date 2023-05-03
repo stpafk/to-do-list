@@ -52,7 +52,7 @@ export default function taskHandler() {
     } else {
         const main = document.querySelector("main");
         main.appendChild(add);
-        displayTasks()
+        displayTasks();
 
         return main
     }

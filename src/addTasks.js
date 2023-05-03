@@ -1,7 +1,7 @@
 import tasksObj from "./objTsk";
 
-export default function addTasks(tskName, due) {
+export default function addTasks(tskName, due, importance) {
 
-    tasksObj.addTask(tskName, due)
+    tasksObj.addTask(tskName, due, importance);
     
 };

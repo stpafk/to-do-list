@@ -3,8 +3,8 @@ import saveTask from "./saveTasks";
 
 const tasksObj = {
     list: [],
-    addTask(tskName, due) {
-        let newTask = new Task(tskName, due);
+    addTask(tskName, due, importance) {
+        let newTask = new Task(tskName, due, importance);
         this.list.push(newTask);
         saveTask();
     }
