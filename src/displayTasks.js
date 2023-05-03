@@ -23,12 +23,12 @@ function displayTasks() {
             delButton.classList = "delBtn";
             delButton.setAttribute("data-index", index);
             delButton.id = index;
-            delButton.innerHTML = "Delete";
+            delButton.innerHTML = "Done Task";
 
             delButton.addEventListener('click', (event) => {
                 const index = event.target.id;
                 deleteTask(index);
-            })
+            });
 
             Child.appendChild(Text);
             Text.appendChild(childText);

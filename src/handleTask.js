@@ -23,9 +23,23 @@ export default function taskHandler() {
     divButton.classList = "taskSubmit";
     divButton.value = "Submit";
 
+    let selectionTask = document.createElement("select");
+    selectionTask.name = "Importance";
+    selectionTask.id = "Dropdown";
+
+    let importanceArray = [["Urgent", 0], ["Important", 1], ["Special Attention", 2], ["Casual", 3], ["Unimportant", 4]];
+    for (let i = 0; i < importanceArray.length; i++) {
+        let option = document.createElement("option");
+        option.value = importanceArray[i][0];
+        option.id = importanceArray[i][1];
+        option.text = importanceArray[i][0];
+        selectionTask.appendChild(option);
+    }
+
     add.appendChild(addH1);
     add.appendChild(nameofTask);
     add.appendChild(dueTo);
+    add.appendChild(selectionTask);
     add.appendChild(divButton);
 
     if (!objProperty) {
