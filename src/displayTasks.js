@@ -1,4 +1,5 @@
 import tasksObj from "./objTsk"
+import deleteTask from "./removeTask";
 
 function displayTasks() {
 
@@ -21,7 +22,13 @@ function displayTasks() {
             let delButton = document.createElement('button');
             delButton.classList = "delBtn";
             delButton.setAttribute("data-index", index);
+            delButton.id = index;
             delButton.innerHTML = "Delete";
+
+            delButton.addEventListener('click', (event) => {
+                const index = event.target.id;
+                deleteTask(index);
+            })
 
             Child.appendChild(Text);
             Text.appendChild(childText);

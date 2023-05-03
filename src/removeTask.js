@@ -1,12 +1,10 @@
 import displayTasks from "./displayTasks";
-import loadTasks from "./loadTasks";
 import tasksObj from "./objTsk";
+import saveTask from "./saveTasks";
 
-export default function deleteTask(event){
+export default function deleteTask(index){
 
-    let index = event.target.data-index
     tasksObj.list.splice(index, 1);
-    loadTasks();
-    displayTasks();
-
+    saveTask();   
+    location.reload()
 };
