@@ -18,9 +18,15 @@ function displayTasks() {
             let childText = document.createTextNode(`Task: ${task.name}, Due: ${task.due}`);
             Child.setAttribute("data-index", index);
 
+            let delButton = document.createElement('button');
+            delButton.classList = "delBtn";
+            delButton.setAttribute("data-index", index);
+            delButton.innerHTML = "Delete";
+
             Child.appendChild(Text);
             Text.appendChild(childText);
             Node.appendChild(Child);
+            Child.appendChild(delButton);
             index++;
 
             return Node;
