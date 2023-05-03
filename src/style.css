@@ -29,6 +29,10 @@ body {
     background-color: #0369a1;
 }
 
+.sidebar .tasks {
+    margin-top: 50%;
+}
+
 main {
     background-color: var(--light-blue);
     grid-area: main;
