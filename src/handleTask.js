@@ -11,8 +11,16 @@ export default function taskHandler() {
     const addH1 = document.createElement('h3');
     addH1.innerHTML = "Add New Task";
 
+    const labelName = document.createElement('label');
+    labelName.classList = "labelTask";
+    labelName.innerHTML = "Task Name";
+
     const nameofTask = document.createElement('input');
     nameofTask.classList = "inputTaskName";
+
+    const labelDue = document.createElement("label");
+    labelDue.classList = "labelDue";
+    labelDue.innerHTML = "Due To:";
 
     const dueTo = document.createElement('input');
     dueTo.classList = "inputDueTo";
@@ -22,6 +30,10 @@ export default function taskHandler() {
     divButton.type = "submit";
     divButton.classList = "taskSubmit";
     divButton.value = "Submit";
+
+    const labelImportance = document.createElement("label");
+    labelImportance.classList = "labelImportance";
+    labelImportance.innerHTML = "Importancy:";
 
     let selectionTask = document.createElement("select");
     selectionTask.name = "Importance";
@@ -37,8 +49,11 @@ export default function taskHandler() {
     }
 
     add.appendChild(addH1);
+    add.appendChild(labelName);
     add.appendChild(nameofTask);
+    add.appendChild(labelDue);
     add.appendChild(dueTo);
+    add.appendChild(labelImportance);
     add.appendChild(selectionTask);
     add.appendChild(divButton);
 
