@@ -66,6 +66,9 @@ export default function loadPage() {
     mainh1.textContent = "Your Tasks";
     main.appendChild(mainh1);
 
+    // create this to solve the problem of grid
+    const taskMain = document.createElement("div");
+    taskMain.classList = "task-main";
 
     const content = document.querySelector("#content");
     content.appendChild(navbar);

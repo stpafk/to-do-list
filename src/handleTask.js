@@ -59,13 +59,14 @@ export default function taskHandler() {
 
     if (!objProperty) {
         
-        const main = document.querySelector('main');
+        const main = document.querySelector('.task-main');
+
         main.appendChild(add);
 
         return main
 
     } else {
-        const main = document.querySelector("main");
+        const main = document.querySelector('.task-main');
         main.appendChild(add);
         displayTasks();
 

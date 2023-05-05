@@ -1,106 +1,122 @@
 :root {
-    --light-blue: #e0f2fe;
-    --dark-blue: #075985;
-    font-family: georgia;
+  --light-blue: #e0f2fe;
+  --dark-blue: #075985;
+  font-family: georgia;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 #content {
-    display: grid;
-     grid-template-columns: 0.5fr 2fr;
-     grid-template-rows: 0.2fr 4fr;
-     grid-template-areas:
-      "sidebar navbar"
-      "sidebar main";
+  display: grid;
+   grid-template-columns: 0.5fr 2fr;
+   grid-template-rows: 0.2fr 4fr;
+   grid-template-areas:
+    "sidebar navbar"
+    "sidebar main";
 }
 
 .navbar {
-    grid-area: navbar;
-    background-color: var(--dark-blue);
-    padding: 0 5%;
-    font-size: 2rem;
+  grid-area: navbar;
+  background-color: var(--dark-blue);
+  padding: 0 5%;
+  font-size: 2rem;
 }
 
 .sidebar {
-    grid-area: sidebar;
-    background-color: #0369a1;
+  grid-area: sidebar;
+  background-color: #0369a1;
 }
 
 .sidebar .tasks {
-    margin: 50% 0;
-    padding: 0;
+  margin: 50% 0;
+  padding: 0;
 }
 
 .sidebar .tasks div:first-child {
-  border-top: 4px solid var(--light-blue);
+border-top: 4px solid var(--light-blue);
 }
 
 .sidebar .tasks div:last-child {
-  border-bottom: 4px solid var(--light-blue);
+border-bottom: 4px solid var(--light-blue);
 }
 
 .sidebar .tasks > * {
-    margin: 0;
-    max-height: 15%;
-    padding: 2vh 0 2vh 0;
-    border-top: 2px solid var(--light-blue);
-    border-bottom: 2px solid var(--light-blue);
+  margin: 0;
+  max-height: 15%;
+  padding: 2vh 0 2vh 0;
+  border-top: 2px solid var(--light-blue);
+  border-bottom: 2px solid var(--light-blue);
 }
 
 .sidebar .tasks div button {
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    color: white;
-    padding-left: 1.6rem;
-    font-size: 2rem; 
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: black;
+  font-weight: 500;
+  padding-left: 1.6rem;
+  font-size: 2rem; 
 }
 
 main {
-    background-color: var(--light-blue);
-    grid-area: main;
-    padding: 0vw 6vh;  
+  background-color: var(--light-blue);
+  grid-area: main;
+  padding: 0vw 6vh;  
 }
 
+
+
 form {
-  display: flex;
-  max-width: 20vw;
-  flex-direction: column;
-  background-color: white;
-  padding: 0 2vw 4vh 2vw;
+margin: 0 0 0 0;
+grid-area: "addtask";
+border: 4px solid orange;
+display: flex;
+max-width: 20vw;
+flex-direction: column;
+background-color: white;
+padding: 0 2vw 4vh 2vw;
 }
 
 form h3 {
-  font-size: 1.4rem;
+font-size: 1.4rem;
 }
 
 form input,
 form select {
-  margin-top: 0.8vh;
-   border: 0.4vh solid grey;
-   padding: 0.2rem;
+margin-top: 0.8vh;
+ border: 0.4vh solid grey;
+ padding: 0.2rem;
 }
 
 form select {
-  background-color: transparent;
+background-color: transparent;
 }
 
 form .taskSubmit {
-  background-color: lightgray;
-  border: 0.4vh solid black;
-  margin: 0.8vh 6vw 0 6vw;
+background-color: lightgray;
+border: 0.4vh solid black;
+margin: 0.8vh 6vw 0 6vw;
 }
 
 .taskObjects > div {
-  display: flex;
-  flex-direction: column;
+grid-area: "tasks";
+border: 4px solid orange;
+max-width: 30vw;
+margin: 2vh 0 2vh 0;
+padding: 0 2vw 2vh 2vw;
+background-color: white;
+display: flex;
+flex-direction: column;
+}
+
+.taskObjects h3 {
+font-size: 1.2rem;
 }
 
 .taskObjects div .delBtn {
-  max-width: 6vw;
+max-width: 6vw;
 }
 
 

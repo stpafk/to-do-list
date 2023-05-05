@@ -3,7 +3,7 @@ import deleteTask from "./removeTask";
 
 function displayTasks() {
 
-        const main = document.querySelector('main');
+        const main = document.querySelector('.task-main');
         const display = document.createElement("div");
         display.className = "taskObjects";
         main.appendChild(display);
@@ -15,7 +15,11 @@ function displayTasks() {
             let Child = document.createElement("div");
             Child.classList = `task-obj-${index}`
             // for the moment i'll just keep a simple paragraph
-            let taskName = document.createElement("h3");
+
+            const divForLabel = document.createElement("div");
+            divForLabel.classList = "for-label";
+
+            let taskName = document.createElement("ul");
             taskName.classList = `title-task`;
             taskName.innerHTML = task.name;
 
@@ -43,7 +47,8 @@ function displayTasks() {
 
             
             Node.appendChild(Child);
-            Child.appendChild(taskName);
+            Child.appendChild(divForLabel);
+            divForLabel.appendChild(taskName);
             Child.appendChild(taskDue);
             Child.appendChild(taskImportance);
             Child.appendChild(delButton);
