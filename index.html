@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content"><nav class="navbar"><div class="webLogo"><h1>To-do-List</h1></div></nav><div class="sidebar"><div class="tasks"><div class="allTasks"><button class="allBtn">All Tasks</button></div><div class="todayTasks"><button class="todayBtn">Today Tasks</button></div><div class="weekTasks"><button class="weekBtn">This Week Tasks</button></div></div></div><main><h1>Your Tasks</h1><form class="addTask"><h3>Add New Task</h3><input class="inputTaskName"><input class="inputDueTo" type="date"><select name="Importance" id="Dropdown"><option value="Urgent" id="0">Urgent</option><option value="Important" id="1">Important</option><option value="Special Attention" id="2">Special Attention</option><option value="Casual" id="3">Casual</option><option value="Unimportant" id="4">Unimportant</option></select><input type="submit" class="taskSubmit" value="Submit"></form><div class="taskObjects"><div data-index="0"><p>Task: In Tasks, add a feature to submit a "SubTask", Due: 2023-06-01, Special Attention</p><button class="delBtn" data-index="0" id="0">Done Task</button></div><div data-index="1"><p>Task: alter css, Due: 2023-05-04, Important</p><button class="delBtn" data-index="1" id="1">Done Task</button></div><div data-index="2"><p>Task: refactor code, Due: 2023-05-17, Urgent</p><button class="delBtn" data-index="2" id="2">Done Task</button></div></div><div class="taskObjects"></div></main></div>
+</body>
+</html>

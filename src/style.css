@@ -30,7 +30,7 @@ body {
 }
 
 .sidebar .tasks {
-    margin: 33vh 0;
+    margin: 50% 0;
     padding: 0;
 }
 
@@ -43,8 +43,9 @@ body {
 }
 
 .sidebar .tasks > * {
-    height: 10vh;
-    padding-top: 10vh;
+    margin: 0;
+    max-height: 15%;
+    padding: 2vh 0 2vh 0;
     border-top: 2px solid var(--light-blue);
     border-bottom: 2px solid var(--light-blue);
 }
@@ -54,8 +55,7 @@ body {
     cursor: pointer;
     background-color: transparent;
     color: white;
-    margin: 0 2.5vw 0 2.5vw;
-    padding: 0;
+    padding: 0 0 0 1.6rem;
     font-size: 2rem; 
 }
 
