@@ -13,10 +13,21 @@ function displayTasks() {
 
             let Node = document.querySelector(".taskObjects");
             let Child = document.createElement("div");
+            Child.classList = `task-obj-${index}`
             // for the moment i'll just keep a simple paragraph
-            let Text = document.createElement('p');
+            let taskName = document.createElement("h3");
+            taskName.classList = `title-task`;
+            taskName.innerHTML = task.name;
 
-            let childText = document.createTextNode(`Task: ${task.name}, Due: ${task.due}, ${task.importance}`);
+            let taskDue = document.createElement("p");
+            taskDue.classList = "due-task";
+            taskDue.innerHTML = task.due;
+
+            let taskImportance = document.createElement("p");
+            taskImportance.classList = "importance-task";
+            taskImportance.innerHTML = task.importance;
+
+
             Child.setAttribute("data-index", index);
 
             let delButton = document.createElement('button');
@@ -30,9 +41,11 @@ function displayTasks() {
                 deleteTask(index);
             });
 
-            Child.appendChild(Text);
-            Text.appendChild(childText);
+            
             Node.appendChild(Child);
+            Child.appendChild(taskName);
+            Child.appendChild(taskDue);
+            Child.appendChild(taskImportance);
             Child.appendChild(delButton);
             index++;
 
