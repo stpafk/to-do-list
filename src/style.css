@@ -55,11 +55,48 @@ body {
     cursor: pointer;
     background-color: transparent;
     color: white;
-    padding: 0 0 0 1.6rem;
+    padding-left: 1.6rem;
     font-size: 2rem; 
 }
 
 main {
     background-color: var(--light-blue);
     grid-area: main;
+    padding: 0vw 6vh;  
 }
+
+form {
+  display: flex;
+  max-width: 20vw;
+  flex-direction: column;
+  background-color: white;
+  padding: 0 2vw 4vh 2vw;
+}
+
+form h3 {
+  font-size: 1.4rem;
+}
+
+form input,
+form select {
+  margin-top: 0.8vh;
+   border: 0.4vh solid grey;
+   padding: 0.2rem;
+}
+
+form select {
+  background-color: transparent;
+}
+
+form .taskSubmit {
+  background-color: lightgray;
+  border: 0.4vh solid black;
+  margin: 0.8vh 6vw 0 6vw;
+}
+
+
+
+
+
+
+
