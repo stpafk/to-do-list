@@ -13,7 +13,7 @@ export default function taskHandler() {
 
     const labelName = document.createElement('label');
     labelName.classList = "labelTask";
-    labelName.innerHTML = "Task Name";
+    labelName.innerHTML = "Task Name:";
 
     const nameofTask = document.createElement('input');
     nameofTask.classList = "inputTaskName";

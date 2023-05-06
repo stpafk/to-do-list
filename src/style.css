@@ -43,8 +43,8 @@ border-bottom: 4px solid var(--light-blue);
 }
 
 .sidebar .tasks > * {
-  margin: 0;
-  max-height: 15%;
+  margin-right: 2vw;
+  max-height: 20vh;
   padding: 2vh 0 2vh 0;
   border-top: 2px solid var(--light-blue);
   border-bottom: 2px solid var(--light-blue);
@@ -55,9 +55,13 @@ border-bottom: 4px solid var(--light-blue);
   cursor: pointer;
   background-color: transparent;
   color: black;
-  font-weight: 500;
+  font-weight: 580;
   padding-left: 1.6rem;
-  font-size: 2rem; 
+  font-size: 3rem; 
+}
+
+.sidebar .tasks div button:last-child {
+  font-size: 1.8rem;
 }
 
 main {
@@ -66,14 +70,20 @@ main {
   padding: 0vw 6vh;  
 }
 
-
+.task-main {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-areas: "tasks addtask";
+}
 
 form {
-margin: 0 0 0 0;
-grid-area: "addtask";
+margin: 0;
+grid-area: addtask;
 border: 4px solid orange;
 display: flex;
 max-width: 20vw;
+max-height: 50vh;
 flex-direction: column;
 background-color: white;
 padding: 0 2vw 4vh 2vw;
@@ -81,6 +91,12 @@ padding: 0 2vw 4vh 2vw;
 
 form h3 {
 font-size: 1.4rem;
+}
+  
+form label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.4rem 0 0.2rem 0;
 }
 
 form input,
@@ -95,13 +111,23 @@ background-color: transparent;
 }
 
 form .taskSubmit {
+cursor: pointer;
 background-color: lightgray;
 border: 0.4vh solid black;
-margin: 0.8vh 6vw 0 6vw;
+margin: 4vh 6vw 0 6vw;
+}
+
+.taskSubmit:hover {
+  background-color: lightgreen;
+}
+
+form > input:focus {
+  outline: none;
+  border: 2px solid red;
 }
 
 .taskObjects > div {
-grid-area: "tasks";
+grid-area: tasks;
 border: 4px solid orange;
 max-width: 30vw;
 margin: 2vh 0 2vh 0;
