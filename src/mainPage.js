@@ -69,6 +69,7 @@ export default function loadPage() {
     // create this to solve the problem of grid
     const taskMain = document.createElement("div");
     taskMain.classList = "task-main";
+    main.appendChild(taskMain);
 
     const content = document.querySelector("#content");
     content.appendChild(navbar);

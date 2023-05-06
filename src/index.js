@@ -10,8 +10,7 @@ import Today from './todayTasks.js'
 function main() {
     
     const mainSection = loadPage();
-    const taskSection = taskHandler();
-    mainSection.appendChild(taskSection);
+    taskHandler();
     return mainSection;
 }
 

@@ -63,7 +63,7 @@ export default function taskHandler() {
 
         main.appendChild(add);
 
-        return main
+        return add
 
     } else {
         const main = document.querySelector('.task-main');
