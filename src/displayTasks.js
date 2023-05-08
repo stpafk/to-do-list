@@ -19,7 +19,7 @@ function displayTasks() {
             const divForLabel = document.createElement("div");
             divForLabel.classList = "for-label";
 
-            let taskName = document.createElement("ul");
+            let taskName = document.createElement("h3");
             taskName.classList = `title-task`;
             taskName.innerHTML = task.name;
 
