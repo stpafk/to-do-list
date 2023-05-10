@@ -9,6 +9,8 @@ body {
 }
 
 #content {
+  height: 100vh;
+  width: 100vw;
   display: grid;
    grid-template-columns: 0.5fr 2fr;
    grid-template-rows: 0.2fr 4fr;
@@ -22,6 +24,7 @@ body {
   background-color: var(--dark-blue);
   padding: 0 5%;
   font-size: 2rem;
+  text-shadow: 2px 2px rgba(43, 41, 41, 0.479);
   color: var(--light-blue)
 }
 
@@ -52,16 +55,24 @@ border-bottom: 4px solid var(--light-blue);
 }
 
 .sidebar .tasks div button {
+  text-shadow: 2px 2px rgba(43, 41, 41, 0.479);
   border: none;
   cursor: pointer;
   background-color: transparent;
   color: var(--light-blue);
   font-weight: 580;
   padding-left: 1.6rem;
-  font-size: 3rem; 
 }
 
-.sidebar .tasks div button:last-child {
+.sidebar .tasks div > button {
+  font-size: 10px;
+}
+
+.sidebar .tasks div button:hover {
+  font-size: 1.9rem;
+}
+
+.sidebar .tasks div > :last-child{
   font-size: 1.8rem;
 }
 
@@ -83,12 +94,18 @@ form {
 margin: 0;
 grid-area: addtask;
 border: 4px solid orange;
+border-radius: 12px;
 display: flex;
+box-shadow: 10px 10px 10px rgba(165, 147, 113, 0.356);
 max-width: 20vw;
 max-height: 50vh;
 flex-direction: column;
 background-color: white;
 padding: 0 2vw 4vh 2vw;
+}
+
+form > * {
+  display: flex;
 }
 
 form h3 {
@@ -131,6 +148,8 @@ form > input:focus {
 .taskObjects > div {
 grid-area: tasks;
 border: 4px solid orange;
+border-radius: 12px;
+box-shadow: 10px 10px 10px rgba(165, 147, 113, 0.356);
 max-width: 30vw;
 margin: 2vh 0 2vh 0;
 padding: 0 2vw 2vh 2vw;

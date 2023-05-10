@@ -14,22 +14,22 @@ function displayTasks() {
             let Node = document.querySelector(".taskObjects");
             let Child = document.createElement("div");
             Child.classList = `task-obj-${index}`
-            // for the moment i'll just keep a simple paragraph
+            
 
             const divForLabel = document.createElement("div");
             divForLabel.classList = "for-label";
 
             let taskName = document.createElement("h3");
             taskName.classList = `title-task`;
-            taskName.innerHTML = task.name;
+            taskName.innerHTML = "Task: " + task.name;
 
             let taskDue = document.createElement("p");
             taskDue.classList = "due-task";
-            taskDue.innerHTML = task.due;
+            taskDue.innerHTML = "Due to: " + task.due;
 
             let taskImportance = document.createElement("p");
             taskImportance.classList = "importance-task";
-            taskImportance.innerHTML = task.importance;
+            taskImportance.innerHTML = "Importance: " + task.importance;
 
 
             Child.setAttribute("data-index", index);
