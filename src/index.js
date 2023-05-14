@@ -4,8 +4,6 @@ import taskHandler from './handleTask';
 import addTasks from './addTasks';
 import loadTasks from './loadTasks';
 import displayTasks from './displayTasks';
-import Week from './weekTasks';
-import Today from './todayTasks.js'
 
 function main() {
     
@@ -21,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const task = document.querySelector('.inputTaskName').value;
         const date = document.querySelector('.inputDueTo').value;
         const importance = document.querySelector("#Dropdown").value
-        addTasks(task, date, importance);
+        addTasks(task, new Date(date), importance);
         //it does append to the local sotrage
     };
 
@@ -31,15 +29,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.querySelector(".todayBtn").addEventListener('click', function() {
-        Today();
+        displayTasks(1);
     });
 
     document.querySelector(".weekBtn").addEventListener('click', function() {
-        Week();
+        displayTasks(2);
     });
 
     loadTasks();
-    displayTasks();
+    displayTasks(0);
 
     return false
 
