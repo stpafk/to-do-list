@@ -7,6 +7,10 @@ import { isToday } from "date-fns";
 function displayTasks(event) {
 
         if (event === 1) {
+
+            const h1 = document.querySelector('.main-h1');
+            h1.innerHTML = "Today Tasks";
+
             let arr = tasksObj.list;
             let nArr = arr.filter((data) => isToday(data.due));
             console.log(arr);
@@ -15,6 +19,10 @@ function displayTasks(event) {
             create(nArr);
 
         } else if (event === 2) {
+
+            const h1 = document.querySelector('.main-h1');
+            h1.innerHTML = "This Week Tasks";
+
             let arr = tasksObj.list.filter((date) => isThisWeek(date));
             document.querySelector(".task-main").innerHTML = "";
             create(arr);

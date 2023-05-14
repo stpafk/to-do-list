@@ -63,6 +63,7 @@ export default function loadPage() {
 
     // Create the h1 element
     const mainh1 = document.createElement("h1");
+    mainh1.classList = "main-h1";
     mainh1.textContent = "Your Tasks";
     main.appendChild(mainh1);
 
