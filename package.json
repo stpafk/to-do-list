@@ -17,16 +17,16 @@
   "author": "stpafk",
   "license": "ISC",
   "devDependencies": {
-    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-env": "^7.21.5",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",
+    "style-loader": "^3.3.2",
     "ts-loader": "^9.4.2",
-    "webpack": "^5.79.0",
-    "webpack-cli": "^5.0.1"
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
   },
   "dependencies": {
-    "date-fns": "^2.30.0",
-    "style-loader": "^3.3.2"
+    "date-fns": "^2.30.0"
   }
 }
