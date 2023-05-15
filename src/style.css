@@ -20,12 +20,25 @@ body {
 }
 
 .navbar {
+  display: flex;
+  align-items: center;
   grid-area: navbar;
   background-color: var(--dark-blue);
+  color: var(--light-blue);
   padding: 0 5%;
+}
+
+.navbar .webLogo {
+  flex: 0 0 auto;
+  margin-right: 5vw;
   font-size: 2rem;
   text-shadow: 2px 2px rgba(43, 41, 41, 0.479);
-  color: var(--light-blue)
+}
+
+.navbar .nav-buttons {
+  flex: 1;
+  align-items: right;
+  padding: 5vh 0 0 0;
 }
 
 .sidebar {

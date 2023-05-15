@@ -11,6 +11,15 @@ export default function loadPage() {
     webLogo.classList.add("webLogo");
     navbar.appendChild(webLogo);
 
+    const navButtons = document.createElement("div");
+    navButtons.classList = "nav-buttons";
+    navbar.appendChild(navButtons);
+
+    const formButton = document.createElement("button");
+    formButton.classList = "form-button";
+    formButton.innerHTML = "New Task"
+    navButtons.appendChild(formButton);
+
     // Create the h1 element
     const h1 = document.createElement("h1");
     h1.textContent = "To-do-List";
