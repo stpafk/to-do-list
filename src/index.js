@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const task = document.querySelector('.inputTaskName').value;
         const date = document.querySelector('.inputDueTo').value;
         const importance = document.querySelector("#Dropdown").value
-        addTasks(task, new Date(date), importance);
+        addTasks(task, date, importance);
         //it does append to the local sotrage
     };
 

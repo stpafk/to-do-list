@@ -1,5 +1,3 @@
-import displayTasks from "./displayTasks";
-import tasksObj from "./objTsk";
 
 export default function taskHandler() {
 

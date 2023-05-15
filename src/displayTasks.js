@@ -7,14 +7,12 @@ import { isToday } from "date-fns";
 function displayTasks(event) {
 
         if (event === 1) {
-
+            console.log('fired')
             const h1 = document.querySelector('.main-h1');
             h1.innerHTML = "Today Tasks";
 
             let arr = tasksObj.list;
-            let nArr = arr.filter((data) => isToday(data.due));
-            console.log(arr);
-            console.log(nArr);
+            let nArr = arr.filter((data) => isToday(new Date(`${data.due}T00:00`)));
             document.querySelector(".task-main").innerHTML = "";
             create(nArr);
 
@@ -23,7 +21,7 @@ function displayTasks(event) {
             const h1 = document.querySelector('.main-h1');
             h1.innerHTML = "This Week Tasks";
 
-            let arr = tasksObj.list.filter((date) => isThisWeek(date));
+            let arr = tasksObj.list.filter((data) => isThisWeek(new Date(data.due)));
             document.querySelector(".task-main").innerHTML = "";
             create(arr);
         } else {
