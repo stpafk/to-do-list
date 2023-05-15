@@ -8,21 +8,12 @@ import displayTasks from './displayTasks';
 function main() {
     
     const mainSection = loadPage();
-    taskHandler();
     return mainSection;
 }
 
 const elementId = document.querySelector('#content');
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('form').onsubmit = () => {
-        const task = document.querySelector('.inputTaskName').value;
-        const date = document.querySelector('.inputDueTo').value;
-        const importance = document.querySelector("#Dropdown").value
-        addTasks(task, date, importance);
-        //it does append to the local sotrage
-    };
-
 
     document.querySelector(".allBtn").addEventListener('click', function() {
         location.reload()
