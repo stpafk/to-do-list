@@ -82,17 +82,14 @@ main {
   padding: 0vw 6vh;  
 }
 
-.task-main {
+.taskObjects {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(auto, 1fr);
-    grid-auto-flow:dense;
-    grid-template-areas: "tasks tasks addtask";
+    grid-template-rows: repeat(1fr, auto);
 }
 
 form {
 margin: 0;
-grid-area: addtask;
 border: 4px solid orange;
 border-radius: 12px;
 display: flex;
@@ -146,7 +143,7 @@ form > input:focus {
 }
 
 .taskObjects > div {
-grid-area: tasks;
+
 border: 4px solid orange;
 border-radius: 12px;
 box-shadow: 10px 10px 10px rgba(165, 147, 113, 0.356);
