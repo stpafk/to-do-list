@@ -36,9 +36,8 @@ body {
 }
 
 .navbar .nav-buttons {
-  flex: 1;
-  align-items: right;
-  padding: 5vh 0 0 0;
+  margin-left: clamp(90px, 500px, 600px);
+  display: flex;
 }
 
 .sidebar {
