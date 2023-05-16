@@ -1,8 +1,6 @@
 import './style.css'
 import loadPage from './mainPage';
-import taskHandler from './handleTask';
-import addTasks from './addTasks';
-import loadTasks from './loadTasks';
+import tasksObj from './objTsk';
 import displayTasks from './displayTasks';
 
 function main() {
@@ -27,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         displayTasks(2);
     });
 
-    loadTasks();
+    tasksObj.loadTasks();
     displayTasks(0);
 
     return false
