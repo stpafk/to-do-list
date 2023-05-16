@@ -32,4 +32,4 @@ const projectSet = {
 
 }
 
-export default function projectSet;
+export default projectSet;
