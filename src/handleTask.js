@@ -56,11 +56,25 @@ export default function taskHandler() {
     add.appendChild(selectionTask);
     add.appendChild(divButton);
 
-    add.onsubmit = () => {
+    add.onsubmit = (event) => {
+        event.preventDefault();
         const task = document.querySelector('.inputTaskName').value;
         const date = document.querySelector('.inputDueTo').value;
-        const importance = document.querySelector("#Dropdown").value
+        const importance = document.querySelector("#Dropdown").value;
+
+        if (task === "") {
+            let lTask = document.querySelector(".labelTask");
+            lTask.innerHTML = "Please input some text!";
+            lTask.style = "color: red;"
+            return;
+        } if (date === "") {
+            let labelDue = document.querySelector(".labelDue");
+            labelDue.innerHTML = "Please input a valid date!";
+            labelDue.style = "color: red";
+        }
+
         tasksObj.addTasks(task, date, importance);
+        location.reload()
         //it does append to the local sotrage
     };
 

@@ -11,13 +11,6 @@ function main() {
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    const mainObj = document.querySelector(".task-main");
-    if (mainObj.textContent === "") {
-        let objText = document.createElement('h3');
-        objText.innerHTML = "It seems that you don't have any task yet!";
-        mainObj.appendChild(objText);
-    }   
-
     document.querySelector(".allBtn").addEventListener('click', function() {
         location.reload()
     });
@@ -32,6 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     tasksObj.loadTasks();
     displayTasks(0);
+
+    const mainObj = document.querySelector(".taskObjects");
+    if (!mainObj.textContent) {
+        let objText = document.createElement('h3');
+        objText.innerHTML = "It seems that you don't have any task yet!";
+        mainObj.appendChild(objText);
+    }   
 
     return false
 
