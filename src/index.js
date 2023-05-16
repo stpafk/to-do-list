@@ -9,9 +9,14 @@ function main() {
     return mainSection;
 }
 
-const elementId = document.querySelector('#content');
-
 document.addEventListener('DOMContentLoaded', function() {
+
+    const mainObj = document.querySelector(".task-main");
+    if (mainObj.textContent === "") {
+        let objText = document.createElement('h3');
+        objText.innerHTML = "It seems that you don't have any task yet!";
+        mainObj.appendChild(objText);
+    }   
 
     document.querySelector(".allBtn").addEventListener('click', function() {
         location.reload()

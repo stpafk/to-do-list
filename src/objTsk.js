@@ -17,7 +17,7 @@ const tasksObj = {
 
     removeTask(index) {
        this.list.splice(index, 1);
-       saveTask();
+       this.saveTask();
        location.reload();
     },
 
