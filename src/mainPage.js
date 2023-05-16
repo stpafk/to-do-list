@@ -17,7 +17,12 @@ export default function loadPage() {
 
     const formButton = document.createElement("button");
     formButton.classList = "form-button";
-    formButton.innerHTML = "New Task"
+    formButton.innerHTML = "New Task";
+
+    formButton.addEventListener("click", function() {
+        taskHandler();
+    })
+
     navButtons.appendChild(formButton);
 
     // Create the h1 element

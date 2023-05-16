@@ -1,3 +1,4 @@
+import displayTasks from "./displayTasks";
 
 export default function taskHandler() {
 
@@ -74,7 +75,6 @@ export default function taskHandler() {
     } else {
         const main = document.querySelector('.task-main');
         main.appendChild(add);
-        displayTasks();
 
         return main
     }
