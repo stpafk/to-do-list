@@ -55,7 +55,7 @@ function displayTasks(event) {
 
                 let taskName = document.createElement("h3");
                 taskName.classList = `title-task`;
-                taskName.innerHTML = "Task: " + task.name;
+                taskName.innerHTML = task.name;
 
                 let taskDue = document.createElement("p");
                 taskDue.classList = "due-task";
@@ -63,7 +63,7 @@ function displayTasks(event) {
 
                 let taskImportance = document.createElement("p");
                 taskImportance.classList = "importance-task";
-                taskImportance.innerHTML = "Importance: " + task.importance;
+                taskImportance.innerHTML = task.importance;
 
 
                 Child.setAttribute("data-index", index);

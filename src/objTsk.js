@@ -7,8 +7,8 @@ function Task(tskName, due, importance) {
 };
 
 const tasksObj = {
-    list: [],
 
+    list: [],
     addTask(tskName, due, importance) {
         let newTask = new Task(tskName, due, importance);
         this.list.push(newTask);
