@@ -1,5 +1,10 @@
-import Task from "./Task";
 import saveTask from "./saveTasks";
+
+function Task(tskName, due, importance) {
+    this.name = tskName,
+    this.due = due,
+    this.importance = importance
+};
 
 const tasksObj = {
     list: [],

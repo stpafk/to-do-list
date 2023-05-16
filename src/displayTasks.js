@@ -1,5 +1,4 @@
 import tasksObj from "./objTsk"
-import deleteTask from "./removeTask";
 import { isThisWeek } from "date-fns";
 import { isToday } from "date-fns";
 
