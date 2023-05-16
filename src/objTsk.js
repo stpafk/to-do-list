@@ -24,13 +24,13 @@ const tasksObj = {
     loadTasks() {
         let storedTasks = localStorage.getItem("myTasks"); // retrieve the myLibrary array from local storage as a JSON string
         if (storedTasks) {
-            tasksObj.list = JSON.parse(storedTasks); // convert the JSON string back to a JavaScript object
+            this.list = JSON.parse(storedTasks); // convert the JSON string back to a JavaScript object
         }
     },
 
     addTasks(tskName, due, importance) {
 
-        tasksObj.addTask(tskName, due, importance);
+        this.addTask(tskName, due, importance);
         
     },
     saveTask() {
