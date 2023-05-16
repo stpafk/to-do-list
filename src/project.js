@@ -1,5 +1,5 @@
 
-const Project = function(name, description=null, list=null) {
+const Project = function(name, description=null, list=[]) {
     this.name = name,
     this.description = description,
     this.list = list
@@ -25,8 +25,11 @@ const projectSet = {
         }
     },
 
-    pushTaskProject(name) {
-
+    pushTaskProject(name, task) {
+        let p = this.list[`${name}`];
+        p.list.push(task);
     }
 
 }
+
+export default function projectSet;
