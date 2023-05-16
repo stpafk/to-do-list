@@ -1,4 +1,6 @@
+import addTasks from "./addTasks";
 import displayTasks from "./displayTasks";
+
 
 export default function taskHandler() {
 

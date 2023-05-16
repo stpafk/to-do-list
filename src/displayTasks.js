@@ -71,7 +71,7 @@ function displayTasks(event) {
 
                 delButton.addEventListener('click', (event) => {
                     const index = event.target.id;
-                    deleteTask(index);
+                    tasksObj.removeTask(index);
                 });
 
                 

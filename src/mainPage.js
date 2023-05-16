@@ -1,5 +1,6 @@
 import taskHandler from "./handleTask";
 
+
 export default function loadPage() {
 
         // Create the navbar element

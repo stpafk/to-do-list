@@ -7,6 +7,11 @@ const tasksObj = {
         let newTask = new Task(tskName, due, importance);
         this.list.push(newTask);
         saveTask();
+    },
+    removeTask(index) {
+       this.list.splice(index, 1);
+       saveTask();
+       location.reload();
     }
 }
 
