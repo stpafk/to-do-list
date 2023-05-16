@@ -6,7 +6,6 @@ import { isToday } from "date-fns";
 function displayTasks(event) {
 
         if (event === 1) {
-            console.log('fired')
             const h1 = document.querySelector('.main-h1');
             h1.innerHTML = "Today Tasks";
 
@@ -35,6 +34,13 @@ function displayTasks(event) {
             const display = document.createElement("div");
             display.className = "taskObjects";
             main.appendChild(display);
+
+            if (data.length === 0) {
+                let objText = document.createElement('h3');
+                objText.innerHTML = "It seems that you don't have any task yet!";
+                display.appendChild(objText);
+                return;
+                }
 
             let index = 0;
             data.forEach((task) => {
