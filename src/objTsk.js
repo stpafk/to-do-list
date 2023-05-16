@@ -34,7 +34,7 @@ const tasksObj = {
         
     },
     saveTask() {
-        localStorage.setItem("myTasks", JSON.stringify(tasksObj.list))
+        localStorage.setItem("myTasks", JSON.stringify(tasksObj.list));
     }
 
 }
