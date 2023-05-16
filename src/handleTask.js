@@ -1,6 +1,4 @@
-import addTasks from "./addTasks";
-import displayTasks from "./displayTasks";
-
+import tasksObj from "./objTsk";
 
 export default function taskHandler() {
 
@@ -62,7 +60,7 @@ export default function taskHandler() {
         const task = document.querySelector('.inputTaskName').value;
         const date = document.querySelector('.inputDueTo').value;
         const importance = document.querySelector("#Dropdown").value
-        addTasks(task, date, importance);
+        tasksObj.addTasks(task, date, importance);
         //it does append to the local sotrage
     };
 
