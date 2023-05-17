@@ -36,8 +36,25 @@ body {
 }
 
 .navbar .nav-buttons {
-  margin-left: clamp(90px, 500px, 600px);
+  margin-left: clamp(90px, 450px, 600px);
   display: flex;
+}
+
+.navbar .form-button {
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-radius: 4px;
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgba(5, 5, 5, 0.356);
+  font-size: 1.5rem;
+}
+
+.navbar .form-button:hover {
+  font-size: 1.7rem;
 }
 
 .sidebar {
