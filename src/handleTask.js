@@ -89,6 +89,9 @@ export default function taskHandler() {
     } else {
         const main = document.querySelector('.task-main');
         main.appendChild(add);
+        const buttonDisable = document.querySelector(".form-button");
+        buttonDisable.disabled = true;
+
 
         return main
     }

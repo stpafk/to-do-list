@@ -59,10 +59,11 @@ function displayTasks(event) {
 
                 let taskDue = document.createElement("p");
                 taskDue.classList = "due-task";
-                taskDue.innerHTML = "Due to: " + task.due;
+                taskDue.innerHTML = "Due to: " + task.due.slice(5, task.due.length);
 
                 let taskImportance = document.createElement("p");
                 taskImportance.classList = "importance-task";
+                taskImportance.id = task.importance;
                 taskImportance.innerHTML = task.importance;
 
 
