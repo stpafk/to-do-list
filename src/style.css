@@ -273,7 +273,7 @@ max-width: 6vw;
 .taskObjects .delBtn {
   margin-left: 25%;
   cursor:pointer;
-  border: 2px solid orangered;
+  border: 2px solid orange;
   border-radius: 4px;
   background-color: white;
 }
