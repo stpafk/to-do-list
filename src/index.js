@@ -2,6 +2,7 @@ import './style.css'
 import loadPage from './mainPage';
 import tasksObj from './objTsk';
 import displayTasks from './displayTasks';
+import projectSet from './project';
 
 function main() {
     
@@ -22,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector(".weekBtn").addEventListener('click', function() {
         displayTasks(2);
     });
+
+    document.querySelector(".project-btn").addEventListener("click", function() {
+        projectSet.loadProjects();
+    })
 
     tasksObj.loadTasks();
     displayTasks(0);   

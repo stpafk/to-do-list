@@ -70,8 +70,17 @@ export default function loadPage() {
     // Create the weekBtn element
     const weekBtn = document.createElement("button");
     weekBtn.classList.add("weekBtn");
-    weekBtn.textContent = "This Week Tasks";
+    weekBtn.textContent = "Week Tasks";
     weekTasks.appendChild(weekBtn);
+
+    const project = document.createElement("div");
+    project.classList = "project-div";
+    tasks.appendChild(project);
+
+    const myProjects = document.createElement("button");
+    myProjects.classList = "project-btn";
+    myProjects.textContent = "View Projects";
+    project.appendChild(myProjects);
 
     // Create the main element
     const main = document.createElement("main");

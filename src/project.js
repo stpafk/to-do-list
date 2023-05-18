@@ -11,23 +11,23 @@ const projectSet = {
     addProject(name, description) {
         let newProject = new Project(name, description);
         this.list.push(newProject);
-        this.saveProject(name);
+        this.saveProject();
     },
 
-    saveProject(name) {
-        localStorage.setItem(`${name}`, JSON.stringify(this.list))
+    saveProject() {
+        localStorage.setItem(`myProjects`, JSON.stringify(this.list))
     },
-
-    loadProjects(name) {
-        let stored = localStorage.getItem(`${name}`);
+    
+    loadProjects() {
+        let stored = localStorage.getItem("myProjects");
         if (stored) {
-            this.list[`${name}`] = JSON.parse(stored);
+            this.list = JSON.parse(stored);
         }
     },
-
-    pushTaskProject(name, task) {
-        let p = this.list[`${name}`];
-        p.list.push(task);
+    
+    pushTaskProject(index, task) {
+        let prj = this.list.at(index)
+        prj.list.push(task);
     }
 
 }
