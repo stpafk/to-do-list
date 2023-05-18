@@ -3,6 +3,7 @@ import loadPage from './mainPage';
 import tasksObj from './objTsk';
 import displayTasks from './displayTasks';
 import projectSet from './project';
+import projectHandler from './html_project';
 
 function main() {
     
@@ -25,9 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.querySelector(".project-btn").addEventListener("click", function() {
-        projectSet.loadProjects();
+        projectHandler().loadHtml();
+        
     })
-
+    
+    projectSet.loadProjects()
     tasksObj.loadTasks();
     displayTasks(0);   
 
