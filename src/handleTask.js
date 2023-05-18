@@ -47,6 +47,19 @@ export default function taskHandler() {
         selectionTask.appendChild(option);
     }
 
+    const closeButton = document.createElement("button");
+    closeButton.classList = "close-btn";
+    closeButton.innerHTML = "X";
+
+    closeButton.addEventListener("click", function() {
+        const form = document.querySelector("form");
+        const buttonDisable = document.querySelector(".form-button");
+        buttonDisable.disabled = false;
+        buttonDisable.style = "cursor: pointer;"
+        
+        form.remove();
+    })
+
     add.appendChild(addH1);
     add.appendChild(labelName);
     add.appendChild(nameofTask);
@@ -55,6 +68,7 @@ export default function taskHandler() {
     add.appendChild(labelImportance);
     add.appendChild(selectionTask);
     add.appendChild(divButton);
+    add.appendChild(closeButton)
 
     add.onsubmit = (event) => {
         event.preventDefault();

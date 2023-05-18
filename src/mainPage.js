@@ -25,7 +25,7 @@ export default function loadPage() {
     })
 
     navButtons.appendChild(formButton);
-
+    
     // Create the h1 element
     const h1 = document.createElement("h1");
     h1.textContent = "To-do-List";
