@@ -71,6 +71,7 @@ export default function taskHandler() {
             let labelDue = document.querySelector(".labelDue");
             labelDue.innerHTML = "Please input a valid date!";
             labelDue.style = "color: red";
+            return;
         }
 
         tasksObj.addTasks(task, date, importance);
@@ -91,6 +92,7 @@ export default function taskHandler() {
         main.appendChild(add);
         const buttonDisable = document.querySelector(".form-button");
         buttonDisable.disabled = true;
+        buttonDisable.style = "cursor: not-allowed;";
 
 
         return main
