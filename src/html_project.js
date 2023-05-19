@@ -27,22 +27,50 @@ function projectHandler() {
             const Node = document.querySelector(".projectObjects");
             const Child = document.createElement("div");
             Child.classList = "project-obj";
+            Child.id = `${i}`;
+
+            const projectH1 = document.createElement("h1");
+            projectH1.classList = "project-h1";
+            projectH1.innerHTML = project.name;
+        
+            const prjDescription = document.createElement("p");
+            prjDescription.classList = "project-description";
+            prjDescription.innerHTML = project.description;
+
+            const prjContainer = document.createElement("div");
+            prjContainer.classList = "list-container";
+
+            const prjUl = document.createElement("ul");
+            prjUl.classList = "prj-ul";
+            /*
+            for (let j = 0; i < project.list.length; j++) {
+                let li = document.createElement("li");
+
+                li.classList = "project-data";
+                li.innerHTML = project.list[j];
+                
+                prjUl.appendChild(li);
+            }
+            */
+            Node.appendChild(projectH1);
+            Node.appendChild(prjDescription);
+            Node.appendChild(prjContainer);
+            prjContainer.appendChild(prjUl);
             Node.appendChild(Child);
 
-            Child.innerHTML = project;
-
+            i++;
             return Node;
 
         })
     }
 
-    function loadProjects() {
+    function newProject() {
         return 0 
     }
 
     return {
         loadHtml,
-        loadProjects
+        newProject
     }
 }
 
