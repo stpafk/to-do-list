@@ -49,8 +49,6 @@ function projectHandler() {
                 for (let j = 0; j < array[i].list.length; j++) {
                     
                     let li = document.createElement("li");
-                    console.log(array[0].list)
-                    console.log(array[i].list[0])
                     li.classList = "project-data";
                     li.innerHTML = array[i].list[j];
                     
