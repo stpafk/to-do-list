@@ -20,10 +20,9 @@ function projectHandler() {
             return;
         }
 
-        let i = 0;
-
-        array.forEach((project) => {
-
+        console.log(array);
+        for (let i = 0; i < array.length; i++) {
+            
             const Node = document.querySelector(".projectObjects");
             const Child = document.createElement("div");
             Child.classList = "project-obj";
@@ -31,37 +30,43 @@ function projectHandler() {
 
             const projectH1 = document.createElement("h1");
             projectH1.classList = "project-h1";
-            projectH1.innerHTML = project.name;
+            projectH1.innerHTML = array[i].name;
         
             const prjDescription = document.createElement("p");
             prjDescription.classList = "project-description";
-            prjDescription.innerHTML = project.description;
+            prjDescription.innerHTML = array[i].description;
 
             const prjContainer = document.createElement("div");
             prjContainer.classList = "list-container";
 
             const prjUl = document.createElement("ul");
             prjUl.classList = "prj-ul";
-            /*
-            for (let j = 0; i < project.list.length; j++) {
-                let li = document.createElement("li");
-
-                li.classList = "project-data";
-                li.innerHTML = project.list[j];
+            
+            if (array[i].list.length === 0 ) {
+                prjUl.innerHTML = "No tasks.";
                 
-                prjUl.appendChild(li);
+            } else {
+                for (let j = 0; j < array[i].list.length; j++) {
+                    
+                    let li = document.createElement("li");
+                    console.log(array[0].list)
+                    console.log(array[i].list[0])
+                    li.classList = "project-data";
+                    li.innerHTML = array[i].list[j];
+                    
+                    prjUl.appendChild(li);
+                }
             }
-            */
-            Node.appendChild(projectH1);
-            Node.appendChild(prjDescription);
-            Node.appendChild(prjContainer);
-            prjContainer.appendChild(prjUl);
+
             Node.appendChild(Child);
+            Child.appendChild(projectH1)
+            Child.appendChild(prjDescription);
+            Child.appendChild(prjContainer);
+            prjContainer.appendChild(prjUl);
 
-            i++;
             return Node;
-
-        })
+            
+        }
     }
 
     function newProject() {

@@ -28,6 +28,7 @@ const projectSet = {
     pushTaskProject(index, task) {
         let prj = this.list.at(index)
         prj.list.push(task);
+        this.saveProject();
     }
 
 }
