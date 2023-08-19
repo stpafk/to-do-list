@@ -1,6 +1,8 @@
 :root {
-  --light-blue: #e0f2fe;
-  --dark-blue: #075985;
+  --light-blue: #b2deff;
+  --dark-blue: #042644;
+  --light-yellow: #ffef32;
+  --orangered: #df6417;
   font-family: georgia;
 }
 
@@ -15,13 +17,14 @@ body {
    grid-template-areas:
     "sidebar navbar"
     "sidebar main";
+    background: linear-gradient(to left top, #053a63, #042644);
 }
 
 .navbar {
   display: flex;
   align-items: center;
   grid-area: navbar;
-  background: linear-gradient(to right bottom, #053a63, #042644);
+  background: transparent;
   color: var(--light-blue);
   padding: 0 5%;
 }
@@ -30,6 +33,7 @@ body {
   flex: 0 0 auto;
   margin-right: 5vw;
   font-size: 2rem;
+  font-weight: 600;
   text-shadow: 2px 2px rgba(43, 41, 41, 0.479);
 }
 
@@ -52,15 +56,15 @@ body {
 }
 
 .navbar .form-button:hover {
-  color: orangered;
-  border-bottom: 2px solid orangered;
-  border-right: 2px solid orangered;
+  color: var(--light-yellow);
+  border-bottom: 2px solid var(--light-yellow);
+  border-right: 2px solid var(--light-yellow);
   
 }
 
 .sidebar {
   grid-area: sidebar;
-  background: linear-gradient(to left bottom, #053a63, #042644);
+  background: transparent;
 }
 
 .sidebar .tasks {
@@ -109,7 +113,13 @@ border-bottom: 4px solid var(--light-blue);
 main {
   background: linear-gradient(to top right, #e0f2f0,#88e6f6);
   grid-area: main;
-  padding: 0vw 6vh;  
+  padding: 0vw 6vh;
+  border-radius: 4px;
+}
+
+main h1, p {
+  color: #042644;
+  font-weight: 800;
 }
 
 .taskObjects {
@@ -205,7 +215,7 @@ form .close-btn {
 
 .taskObjects > div {
 
-border: 4px solid orange;
+border: 4px solid var(--light-yellow);
 border-radius: 12px;
 box-shadow: 10px 10px 10px rgba(165, 147, 113, 0.356);
 max-width: 30vw;
