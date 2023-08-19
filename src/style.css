@@ -21,7 +21,7 @@ body {
   display: flex;
   align-items: center;
   grid-area: navbar;
-  background-color: var(--dark-blue);
+  background: linear-gradient(to right bottom, #053a63, #042644);
   color: var(--light-blue);
   padding: 0 5%;
 }
@@ -60,7 +60,7 @@ body {
 
 .sidebar {
   grid-area: sidebar;
-  background-color: #0369a1;
+  background: linear-gradient(to left bottom, #053a63, #042644);
 }
 
 .sidebar .tasks {
@@ -107,7 +107,7 @@ border-bottom: 4px solid var(--light-blue);
 }
 
 main {
-  background-color: var(--light-blue);
+  background: linear-gradient(to top right, #e0f2f0,#88e6f6);
   grid-area: main;
   padding: 0vw 6vh;  
 }

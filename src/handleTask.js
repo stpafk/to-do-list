@@ -71,6 +71,7 @@ export default function taskHandler() {
     add.appendChild(closeButton)
 
     add.onsubmit = (event) => {
+        
         event.preventDefault();
         const task = document.querySelector('.inputTaskName').value;
         const date = document.querySelector('.inputDueTo').value;
@@ -78,9 +79,11 @@ export default function taskHandler() {
 
         if (task === "") {
             let lTask = document.querySelector(".labelTask");
-            lTask.innerHTML = "Please input some text!";
+            lTask.innerHTML = "Please input some valid task!";
             lTask.style = "color: red;"
             return;
+
+
         } if (date === "") {
             let labelDue = document.querySelector(".labelDue");
             labelDue.innerHTML = "Please input a valid date!";
