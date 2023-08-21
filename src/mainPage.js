@@ -1,5 +1,5 @@
 import taskHandler from "./handleTask";
-
+import handleProject from "./addNewProject";
 
 export default function loadPage() {
 
@@ -27,6 +27,10 @@ export default function loadPage() {
     const addProject = document.createElement("button");
     addProject.classList = "add-project";
     addProject.innerHTML = "New Project";
+
+    addProject.addEventListener("click", function() {
+        handleProject();
+    })
 
     navButtons.appendChild(formButton);
     navButtons.appendChild(addProject);
