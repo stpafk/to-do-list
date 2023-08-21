@@ -24,7 +24,12 @@ export default function loadPage() {
         taskHandler();
     })
 
+    const addProject = document.createElement("button");
+    addProject.classList = "add-project";
+    addProject.innerHTML = "New Project";
+
     navButtons.appendChild(formButton);
+    navButtons.appendChild(addProject);
     
     // Create the h1 element
     const h1 = document.createElement("h1");
