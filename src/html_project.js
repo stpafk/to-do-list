@@ -41,29 +41,12 @@ function projectHandler() {
 
             const prjUl = document.createElement("ul");
             prjUl.classList = "prj-ul";
-            
-            if (array[i].list.length === 0 ) {
-                prjUl.innerHTML = "No tasks.";
-                
-            } else {
-                for (let j = 0; j < array[i].list.length; j++) {
-                    
-                    let li = document.createElement("li");
-                    li.classList = "project-data";
-                    li.innerHTML = array[i].list[j];
-                    
-                    prjUl.appendChild(li);
-                }
-            }
 
             Node.appendChild(Child);
             Child.appendChild(projectH1)
             Child.appendChild(prjDescription);
             Child.appendChild(prjContainer);
             prjContainer.appendChild(prjUl);
-
-            return Node;
-            
         }
     }
 

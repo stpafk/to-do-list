@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.querySelector(".project-btn").addEventListener("click", function() {
+        const h1 = document.querySelector('.main-h1');
+        h1.innerHTML = "Your Projects";
         projectHandler().loadHtml();
         
     })
